@@ -122,3 +122,9 @@ sleep 2
 #removing the garbage/extra files
 rm -r /usr/lib/vmware/modules/source/vmnet-only
 rm -r /usr/lib/vmware/modules/source/vmmon-only
+
+echo ""
+echo ""
+echo "__________________________________________________________________"
+echo "          EVERYTHING HAS BEEN SET UP SUCCESSFULLY                 "
+echo "__________________________________________________________________"
