@@ -60,12 +60,22 @@ echo "__________________________________________________________________"
 sleep 2
 #extracting the vmnet tarball and processing make file
 tar xvf vmnet.tar
+
+#copying missing files from gcc include directory 
+cp /lib/gcc/x86_64-linux-gnu/11/include/stdarg.h /usr/lib/vmware/modules/source/vmnet-only/
+cp /lib/gcc/x86_64-linux-gnu/11/include/stddef.h /usr/lib/vmware/modules/source/vmnet-only/
+
 cd vmnet-only
 make
 cd ..
 
 #extracting the evmmon tarball and process make file
 tar xvf vmmon.tar
+
+#copying missing files from gcc include directory 
+cp /lib/gcc/x86_64-linux-gnu/11/include/stdarg.h /usr/lib/vmware/modules/source/vmmon-only/./include/
+cp /lib/gcc/x86_64-linux-gnu/11/include/stddef.h /usr/lib/vmware/modules/source/vmmon-only/./include/
+
 cd vmmon-only
 make
 cd ..
